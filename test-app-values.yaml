@@ -1,12 +1,12 @@
 
 
-    - name: testaskdjkkla
-      value: ljkhsdjkfghsdjkfhjklsfjkld
-            - name: image.sadasdasd
-              value: ljkhsdjkfghsdjkfhjklsfjkld
-            - name: image.tag
-              value: f3e248c7d76b2658ae8060368db30ea836760ef9
-            - name: image.fgdhdfghtag
-              value: ljkhsdjkfghsdjkfhjklsfjkld
-      - name: test
-        value: ljkhsdjkfghsdjkfhjklsfjkld
+- name: testaskdjkkla
+value: ljkhsdjkfghsdjkfhjklsfjkld
+- name: image.sadasdasd
+value: ljkhsdjkfghsdjkfhjklsfjkld
+- name: image.tag
+value: f3e248c7d76b2658ae8060368db30ea836760ef9
+- name: image.fgdhdfghtag
+value: ljkhsdjkfghsdjkfhjklsfjkld
+- name: test
+value: ljkhsdjkfghsdjkfhjklsfjkld
