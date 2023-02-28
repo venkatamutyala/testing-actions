@@ -22,7 +22,7 @@ jobs:
 
       - name: Create test.yaml file
         run: |
-          echo "Hello, world!" > test.yaml
+          echo "Hello, world!" >> test.yaml
           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
           git checkout main
           echo "updating image tag in values file"

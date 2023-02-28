@@ -1,6 +1,5 @@
 
 
 
-image:
-  tag:
-  
+- name: image.tag
+  value: ljkhsdjkfghsdjkfhjklsfjkld
