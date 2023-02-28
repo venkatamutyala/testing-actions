@@ -5,6 +5,10 @@ on:
       tag:
       
 
+concurrency:
+  group: 'tag-updater'
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
