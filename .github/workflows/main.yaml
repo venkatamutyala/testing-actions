@@ -21,7 +21,7 @@ jobs:
 
       - name: Create test.yaml file
         run: |
-          sed -i -e '/^- name: image.tag/{n;s/value:.*/value: venkat1234/;}' test-app-values.yaml
+          sed -i -e '/^- name: image.tag/{n;s/value:.*/value: venkat1234/;}' ${{ inputs.manifest_to_update }}
           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
           git checkout main
           echo "updating image tag in values file"
