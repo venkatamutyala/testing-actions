@@ -23,7 +23,7 @@ jobs:
       - name: Checkout current branch
         uses: actions/checkout@v2
 
-      - name: Create test.yaml file
+      - name: Update Container Image Tag
         run: |
           sed -i -e '/^- name: image.tag/{n;s/value:.*/value: ${{ inputs.tag }}/;}' ${{ inputs.manifest_to_update }}
           git config --global user.email ci-bot@argocd.com && git config --global user.name ci-bot
