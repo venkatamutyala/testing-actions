@@ -1,4 +1,9 @@
-on: [push, workflow_dispatch]
+on: 
+  workflow_dispatch:
+    inputs:
+      manifest_to_update:
+      tag:
+      
 
 permissions:
   contents: write
@@ -8,14 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: venkatamutyala/hello-world-javascript-action@v1.4
-        with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: 
+        run: echo 'Updating ${{ inputs.manifest_to_update }} with tag ${{ inputs.tag }}'
 
       - name: Checkout current branch
         uses: actions/checkout@v2
