@@ -19,12 +19,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create test.yaml file
-        run: echo "Hello, world!" > test.yaml
-
-      - name: Commit and push changes to main branch
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'Add test.yaml file'
-          commit_options: '--no-verify'
-          file_pattern: 'test.yaml'
-          branches: 'main'
+        run: |
+          echo "Hello, world!" > test.yaml
+          git checkout main
+          echo "updating image tag in values file"
+          sed -i "s,tag:.*,tag:\ ${{ github.sha }}," helm/webapp/values.yaml
+          git add . && git commit -m "update image tag"
+          git push
+ 
